@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <title>
+  
+  </title>
+<style>
+
+*{
+box-sizing: border-box;
+font-family:sans-serif;
+}
+
+
+body{
+
+/*font-family:"Times New Roman", Times, serif;*/
+font-size: 18px;
+color:#333333;
+background-color:#f8f8ff;
+padding:0;
+margin:0;
+
+}
+.navbar{
+width:100%;
+background-color:#333333;
+color:#959595; 
+
+
+}
+.container_1{
+
+  width:100%;
+}
+.header_top{
+  position:fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  z-index: 9999;
+  
+  width:100%;
+  height:50px;
+
+  background-color:rgb(16,16,16);
+  
+  display:block;
+  border-radius: 0px;
+  text-align: center;
+ 
+  
+
+}
+.hvr:hover{
+
+  color:#f6f6f6;
+  
+}
+
+
+.header_top span{
+  display:block;
+  position: relative;
+  width:90%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  line-height:50px;
+   
+  
+  padding:2px;
+
+  
+}
+.bt{
+
+  
+line-height: 50px;
+display: none;
+width:44px;
+height:39px;
+margin: 6px 5px 0px 0px;
+padding: 4px 7px 4px 7px;
+border:1px solid #333;
+z-index: 9999;
+ 
+
+
+}
+
+.icon{
+
+  display:none;
+  width:22px;
+  height:;
+  background-color:white;
+  padding-right:0px;
+  margin:1px 2px 2px 0px;
+}
+.menu{
+
+
+position:absolute;
+top:0;
+right:0;
+margin:0;
+line-height: 50px;
+padding:0;
+
+
+}
+.menu li{
+  list-style: none;
+  display: inline-block;
+  margin-right:20px
+}
+.menu a{
+
+  text-decoration: none;
+  color:#959595;
+
+}
+
+.head{
+
+width:100%;
+height:300px;
+background-color:yellowgreen;
+margin-top: 50px;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+
+
+
+
+}
+.logo{
+  display:block;
+  float:left;
+  width:150px;
+  height:100px;
+  background-image:url("saryam_logo.png");
+  background-repeat: no-repeat;
+  
+  
+
+}
+.brand{
+  
+
+  clear:both;
+  width:90%;
+  margin-right:auto;
+  margin-left: auto;
+  text-align: center;
+  vertical-align: middle;
+  font-size:40px;
+  color:greenyellow; 
+  /* text-shadow: 1px 1px 1px #fff; */
+  
+}
+
+/* Jumbotron(Tank Level)*/
+.jumbotron{
+
+  width:80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding:10px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.tank_jb{
+
+  width:100%;
+  height:400px;
+  border: 1px solid #333;
+  
+}
+.container{
+
+  width:80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+.row1{
+
+  width:90%;
+  padding: 5px 5px 5px 5px ;
+  border: 1px solid #959595;
+  
+  height:300px;
+  
+  
+
+}
+.row2{
+
+  
+  width:90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px 5px 5px 5px ;
+  border: 1px solid #959595;
+  height:300px;
+
+
+  
+  
+  
+
+}
+.row3{
+
+  width:90%;
+  padding: 5px 0px 5px 5px ;
+  border: 1px solid #959595;
+  margin-left: 26px;
+  height:300px;
+  
+  
+  
+
+}
+.tle{
+
+  width:100%;
+  margin-right:auto;
+  margin-left:auto;
+  text-align: center;
+  font-size:32px;
+  color:#333;
+}
+.attr{
+
+position: relative;
+top:20px;
+margin-bottom:40px;
+font-size: 22px;
+
+}
+
+/* Motor Condition */
+.mot_stat{
+  
+  position: relative;
+  top:50px;
+  width:90%;
+  height:150px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  vertical-align: middle;
+  background-image:url("motor_off.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
+
+
+
+
+
+
+
+
+/* Length of Tank */ 
+.len{
+position:absolute;
+top:0px;
+left:142px;
+
+text-align: center;
+margin-bottom:40px;
+font-size: 22px;
+
+}
+
+/* Breadth of Tank */
+.bre{
+  position: absolute;
+top:0px;
+left:141px;
+margin-bottom:40px;
+font-size: 22px;
+
+
+}
+
+/* Heigth of Tank */
+.hi{
+  position:absolute;
+top:0px;
+left:142px;
+margin-bottom:40px;
+font-size: 22px;
+
+
+}
+/* Capacity of Tank */
+.cap{
+ position: absolute;
+top:0px;
+left:138px;
+margin-bottom:40px;
+font-size: 22px;
+
+
+}
+/* Real-Time volume */
+.vol{
+ position:absolute;
+top:0px;
+left:138px;
+margin-bottom:40px;
+font-size: 22px;
+color:#f06543;
+font-weight: bold;
+
+
+}
+
+/* Real-Time Level */
+.lvl{
+
+  position: absolute;
+top:0px;
+left:137px;
+margin-bottom:40px;
+font-size: 22px;
+color:#f06543;
+font-weight: bold;
+
+
+}
+
+
+
+
+
+
+  
+
+
+
+@media (min-width: 992px){
+  
+.col-lg-4{
+  float:left;
+  width:33.33%;
+  height:333px;
+  position: relative;
+  
+}
+.row3{
+
+  width:90%;
+  padding: 5px 0px 5px 5px ;
+  border: 1px solid #959595;
+  margin-left: 26px;
+  height:300px;
+  position: absolute;
+  top:0px;
+  right:0px;
+  
+  
+
+}
+.row1{
+
+  width:90%;
+  padding: 5px 5px 5px 5px ;
+  border: 1px solid #959595;
+  
+  height:300px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  
+  
+
+}
+
+
+
+
+
+
+
+
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+  .row1{
+
+  width:90%;
+  padding: 5px 5px 5px 5px ;
+  border: 1px solid #959595;
+  
+  height:300px;
+  position:absolute;
+  top:0px;
+  left: 0px;
+  
+  
+
+}
+
+  
+  .row2{
+
+  width:90%;
+  padding: 5px 0px 5px 5px ;
+  border: 1px solid #959595;
+  height:300px;
+  position:absolute;
+  top:0px;
+  right: 0px;
+  
+
+}
+.row3{
+
+  width:100%;
+  padding: 5px 0px 5px 5px ;
+  border: 1px solid #959595;
+  height:300px;
+  margin:0px;
+  
+  
+
+}
+.col-md-6{
+float:left;
+  width:50%;
+  height:333px;
+  
+  padding-top: 0px;
+  position:relative;
+ 
+}
+.col-md-12{
+
+  float:left;
+  width:100%;
+  height:150px;
+  padding-top: 0px;
+  position:relative;
+}
+
+}
+
+
+@media (max-width: 767px){
+  .col-sm-12{
+
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+    height:333px;
+    float:left;
+    
+    
+  }
+
+  .row1{
+
+  width:100%;
+  padding: 5px 5px 5px 5px ;
+  border: 1px solid #959595;
+  
+  height:300px;
+  
+  
+
+}
+.row2{
+
+  width:100%;
+  padding: 5px 5px 5px 5px ;
+  margin:0px;
+  border: 1px solid #959595;
+  height:300px;
+  
+  
+  
+
+}
+.row3{
+
+  width:100%;
+  padding: 5px 0px 5px 5px ;
+  border: 1px solid #959595;
+  height:300px;
+  margin:0px;
+  
+  
+
+}
+
+  .tank_jb{
+
+  width:100%;
+  height:300px;
+  
+  
+  border: 1px solid #333;
+  
+}
+.jumbotron{
+
+  padding: 0px;
+}
+
+  
+
+  .hide_ls{
+
+    display:none;
+  }
+  .size_ls{
+
+    font-size: 30px;
+    width:100%;
+    bottom:0px;
+
+    
+
+
+  }
+  .head{
+
+    height:150px;
+  }
+
+
+  .bt{
+
+
+    display: block;
+    position: absolute;
+  top:0;
+right:0;
+background-color:rgb(16,16,16);
+transition: 0.7s;
+  }
+
+
+  .icon{
+
+    display:block;
+    background-color:#fff;
+
+
+  }
+  .bt:hover{
+
+    background-color:#333;
+    cursor: pointer;
+  }
+  .menu li{
+
+    border: 1px solid #333;
+  }
+  .collapse{
+
+    display:block;
+    width:100%;
+  }
+  
+
+
+
+
+
+
+}
+@media (max-width: 357px)
+{
+
+.header_top span{
+
+    padding-right:30px;
+  }
+  .icon{
+
+    padding-left:0px !important;
+    padding-right: 2px !important;
+  }
+
+
+  
+
+}
+@media (max-width:319px)
+{
+
+  .top{
+
+    padding-right:10px !important;
+  }
+}
+
+
+  
+
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<header class="navbar">
+
+<div class="header_top">
+<span class="top">Building Management System</span>
+<button class="bt">
+  <span class="icon"></span>
+  <span class="icon"></span>
+  <span class="icon"></span>
+</button>
+<div class="collapse">
+<ul class="menu">
+<li class="li-collapse"><a class="hvr" href="http://saryam.com/Saryam_Profile.html" title="About Us" target="_blank"> About</a></li>
+<li class="li-collapse"><a class="hvr" href="http://saryam.com/Contact_Saryam.html" title="Contact Us" target="_blank"> Contact Us</a></li>
+</ul></div></div>
+<div class="head">
+<div class="logo" alt="Logo Image"></div>
+<div class="brand size_ls"><h2 class="size_ls">Water Level Controller</h2></div>
+
+</div>
+
+</header>
+
+<div class="jumbotron">
+<div class ="tank_jb"></div>
+</div>
+<div class="container">
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="row1">
+<div class="tle">Dimensions</div>
+<div class="attr">Length :<span class="len">Xm</span></div>
+<div class="attr">Breadth :<span class="bre">Ym</span></div>
+<div class="attr">Height :<span class="hi">Zm</span></div>
+<div class="attr">Capacity :<span class="cap">Qm</span></div>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="row2">
+<div class="tle">Real-Time Status</div>
+<div class="attr">Volume :<span class="vol">A Ltrs</span></div>
+<div class="attr">Level :<span class="lvl">B %</span></div>
+
+</div>
+
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12">
+<div class="row3">
+<div class="tle">Motor Status</div>
+<div class="mot_stat"></div>
+
+</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+  var acc = document.getElementsByClassName("bt");
+var i;
+
+
+/*$(document).ready(function(){
+    $(".bt").click(function(){
+
+        $("collapse").slideDown("slow");
+    });
+});*/
+
+
+   
+    
+    acc[0].onclick = function(){
+        
+        var panel = this.nextElementSibling;
+        var menu=document.getElementsByClassName("menu");
+        var list=document.getElementsByClassName("li-collapse");
+        var brd=document.getElementsByClassName("brand");
+        var hd=document.getElementsByClassName("head");
+        if (panel.style.display==="block") {
+
+        panel.style.display="none";
+        } else {
+        panel.style.display="block";
+
+          $("#collapse").slideDown("slow");
+
+          
+            for(i=0;i<list.length;i++)
+            {
+               list[i].style.display="block";
+               list[i].style.position="relative";
+            list[i].style.top="49px";
+            list[i].style.marginRight="0px";
+            list[i].style.background="rgb(16,16,16)";
+            list[i].style.width="100%"
+            list[i].style.background="#414244";
+            list[i].style.color="black";
+
+
+            }
+            list[1].style.marginBottom="10px";
+            menu[0].style.width="100%";
+            
+            
+
+        }
+    }
+   
+
+    if(matchMedia)
+    {
+ var mq=window.matchMedia("(min-width: 768px)");
+ mq.addListener(WidthChange);
+ WidthChange(mq);
+
+    }
+
+    function WidthChange(mq){
+      var panel1=document.getElementsByClassName("collapse");
+       var list1=document.getElementsByClassName("li-collapse");
+       var menu1=document.getElementsByClassName("menu");
+       var hd=document.getElementsByClassName("head");
+       var i;
+       
+      if(mq.matches){
+
+      panel1[0].style.display="block";
+      for(i=0;i<list1.length;i++)
+      {
+        list1[i].style.display="inline-block";
+        list1[i].style.position="static";
+        list1[i].style.marginRight="20px";
+        list1[i].style.width="auto";
+        list1[i].style.background="rgb(16,16,16)";
+        list1[i].style.color="#959595";
+
+
+      }
+
+      hd[0].style.height="300px";
+      menu1[0].style.width="auto";
+      
+
+}
+else
+{
+
+  panel1[0].style.display="none";
+  hd[0].style.height="150px";
+}
+
+
+
+    }
+ 
+ 
+
+</script>
+</body>
+</html>
