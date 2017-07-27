@@ -58,6 +58,7 @@ color:#959595;
 .hvr:hover{
 
   color:#f6f6f6;
+  transition: 0.5s;
   
 }
 
@@ -92,6 +93,109 @@ z-index: 9999;
 
 }
 
+.bt1{
+
+line-height: 50px;
+display: none;
+width:100%;
+z-index: 9999;
+
+
+}
+.bt-left{
+
+  position:absolute;
+  top:0px;
+  left:0;
+  width:80px;
+height:50px;
+line-height:50px;
+  z-index:9999;
+  
+border:1px solid #333;
+  vertical-align: middle;
+
+  
+background-color:rgb(16,16,16);
+color:#959595;
+font-size: 22px;
+transition:0.7s;
+border-bottom: 0px;
+}
+
+.bt-sp{
+
+  width:100%;
+  margin:auto;
+  margin-bottom:0;
+  margin-top:0;
+  padding:0px !important;
+  height:47px;
+
+
+}
+.bt-left:hover{
+background-color:#333;
+    cursor: pointer;
+
+
+
+}
+.menu-left{
+position:relative;
+bottom:4px;
+left:0;
+padding:0px;
+margin-top:0px;
+background-color:rgb(65,66,68);
+z-index: 9998;
+
+}
+.li-left{
+  list-style:none;
+  width:100%;
+  height:50px;
+  margin:auto;
+  vertical-align: middle;
+  line-height: 50px;
+  
+  
+  border:1px solid #333;
+  border-bottom:0px;
+
+
+}
+.al1:hover{
+color:white;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+.al1{
+
+  text-decoration: none;
+  color:#959595;
+}
+.menu1{
+  margin:0;
+line-height: 50px;
+padding:0;
+
+
+
+}
+.menu1 li{
+list-style: none;
+  display: none;
+  margin-right:20px
+
+}
+.menu li:nth-child(3){
+display:none !important;
+
+}
+
+
 .icon{
 
   display:none;
@@ -124,6 +228,18 @@ padding:0;
   color:#959595;
 
 }
+.menu1 .al{
+
+  text-decoration: none;
+  color:black;
+}
+
+.menu1 .al:hover{
+
+  color:white;
+  transition: 0.5s;
+}
+
 
 .head{
 
@@ -340,9 +456,51 @@ font-size: 22px;
 color:#f06543;
 font-weight: bold;
 
+}
+.footer{
 
+  position:absolute;
+  top:1160px !important;
+   width:100%;
+   
+   vertical-align: middle;
+   
+  background-color:rgb(218,165,32);
+ 
 }
 
+.ft-sp{
+
+  width:100%;/*
+  position:absolute;
+  top:0;
+  right:0px;*/
+  text-align:center;
+
+ margin:auto;
+ padding:40px;
+  font-size:22px;
+  color:#171d1c;
+  font-family:cursive;
+  
+}
+
+.copy{
+  
+  position:absolute;
+  top:1330px !important;
+  width: 100%;
+  height:30px;
+  
+}
+
+.copy-sp{
+
+  width:100%;
+  
+  text-align:right;
+  color:#959595;
+}
 
 
 
@@ -399,7 +557,17 @@ font-weight: bold;
 
 }
 
+
+
 @media (min-width:768px) and (max-width: 991px) {
+
+  .footer{
+
+    top:1500px !important;
+  }
+  .copy{
+    top:1710px !important;
+  }
   .row1{
 
   width:90%;
@@ -412,6 +580,12 @@ font-weight: bold;
   left: 0px;
   
   
+
+}
+
+.menu li:nth-child(3){
+  display:none !important;
+
 
 }
 
@@ -461,6 +635,21 @@ float:left;
 
 
 @media (max-width: 767px){
+
+  .copy-sp{
+    text-align:center !important;
+  }
+
+  .footer{
+
+    top:1560px !important;
+    font-size:22px;
+  }
+  .copy{
+    top:1770px !important;
+  }
+
+  
   .col-sm-12{
 
     width:100%;
@@ -553,6 +742,16 @@ right:0;
 background-color:rgb(16,16,16);
 transition: 0.7s;
   }
+  .bt1{
+
+    display:block;
+    background-color:rgb(65,66,68);
+    transition:0.5s;
+    font-size: 22px;
+    color:rgb(149,149,149);
+    border: 1px solid #333;
+    border-top:0px;
+  }
 
 
   .icon{
@@ -567,6 +766,12 @@ transition: 0.7s;
     background-color:#333;
     cursor: pointer;
   }
+  .bt1:hover{
+  background-color:#333;
+    cursor: pointer;
+
+  }
+  
   .menu li{
 
     border: 1px solid #333;
@@ -576,12 +781,75 @@ transition: 0.7s;
     display:block;
     width:100%;
   }
+  .li-collapse1{
+    
+    display:block;
+    width:100%;
+    background-color:#505050;
+
+
+
+
+  }
+  
+  .menu li:nth-child(3){
+display:block !important;
+
+}
+.menu1{
+position:relative;
+height:auto;
+display:none;
+scroll-behavior: auto;
+
+  }
+  
+
   
 
 
 
 
 
+
+}
+
+@media (max-width: 686px){
+
+  .copy{
+    top:1800px !important;
+  }
+}
+
+@media (max-width: 550px){
+
+  .copy{
+    top:1840px !important;
+  }
+}
+@media (max-width: 466px){
+
+  .copy{
+    top:1880px !important;
+
+  }
+
+}
+@media (max-width: 396px){
+
+  .copy{
+    top:1910px !important;
+
+  }
+
+
+}
+@media (max-width: 372px){
+
+  .copy{
+    top:1940px !important;
+
+  }
 
 }
 @media (max-width: 357px)
@@ -627,6 +895,11 @@ transition: 0.7s;
 
 <div class="header_top">
 <span class="top">Building Management System</span>
+<button class="bt-left"><span class="bt-sp">Tank</span></button>
+<ul class="menu-left">
+<li class="li-left"><a class="al1" href="">OHD</a></li>
+<li class="li-left"><a class="al1" href="">Sump</a></li>
+</ul>
 <button class="bt">
   <span class="icon"></span>
   <span class="icon"></span>
@@ -636,6 +909,13 @@ transition: 0.7s;
 <ul class="menu">
 <li class="li-collapse"><a class="hvr" href="http://saryam.com/Saryam_Profile.html" title="About Us" target="_blank"> About</a></li>
 <li class="li-collapse"><a class="hvr" href="http://saryam.com/Contact_Saryam.html" title="Contact Us" target="_blank"> Contact Us</a></li>
+<li class="li-collapse"><button class="bt1">Tank
+</button>
+<ul class="menu1">
+<li class="li-collapse1"><a class="al" href="">OHD</a></li>
+<li class="li-collapse1"><a class="al" href="">Sump</a></li>
+</ul>
+</li>
 </ul></div></div>
 <div class="head">
 <div class="logo" alt="Logo Image"></div>
@@ -669,6 +949,7 @@ transition: 0.7s;
 </div>
 
 </div>
+
 <div class="col-lg-4 col-md-12 col-sm-12">
 <div class="row3">
 <div class="tle">Motor Status</div>
@@ -677,10 +958,12 @@ transition: 0.7s;
 </div>
 </div>
 
-
-
-
 </div>
+<div class="footer">
+<div class="ft-sp">Saryam's Water Level Controller built with Japanese technology ensures automatic water supply and drainage control. It is ideal for level controller of any conducive liquid and prevents pump idling.</div>
+</div>
+<div class="copy"><div class="copy-sp">Saryam Engineering Private Limited&copy;Copyright 2004.</div></div>
+
 
 
 
@@ -707,43 +990,91 @@ var i;
 
 
    
-    
-    acc[0].onclick = function(){
+    for(i=0;i<acc.length;i++) {
+    acc[i].onclick = function(){
         
         var panel = this.nextElementSibling;
         var menu=document.getElementsByClassName("menu");
+         var tk=document.getElementsByClassName("menu1");
         var list=document.getElementsByClassName("li-collapse");
         var brd=document.getElementsByClassName("brand");
         var hd=document.getElementsByClassName("head");
         if (panel.style.display==="block") {
 
         panel.style.display="none";
+        
         } else {
         panel.style.display="block";
-
-          $("#collapse").slideDown("slow");
+        
+          
 
           
-            for(i=0;i<list.length;i++)
+            for(j=0;j<list.length;j++)
             {
-               list[i].style.display="block";
-               list[i].style.position="relative";
-            list[i].style.top="49px";
-            list[i].style.marginRight="0px";
-            list[i].style.background="rgb(16,16,16)";
-            list[i].style.width="100%"
-            list[i].style.background="#414244";
-            list[i].style.color="black";
+               list[j].style.display="block";
+               list[j].style.position="relative";
+            list[j].style.top="49px";
+            list[j].style.marginRight="0px";
+            list[j].style.background="rgb(16,16,16)";
+            list[j].style.width="100%"
+            list[j].style.background="#414244";
+            list[j].style.color="black";
 
 
             }
-            list[1].style.marginBottom="10px";
+            
             menu[0].style.width="100%";
             
             
 
         }
     }
+}
+
+var acc1=document.getElementsByClassName("bt1");
+var h;
+
+for(h=0;h<acc1.length;h++)
+{
+
+  acc1[h].onclick=function(){
+var men1=this.nextElementSibling;
+if(men1.style.display==="block")
+{
+
+  men1.style.display="none";
+}
+else
+{
+
+  men1.style.display="block";
+}
+
+  }
+}
+
+var acc2=document.getElementsByClassName("bt-left");
+var p;
+
+for(p=0;p<acc2.length;p++)
+{
+
+  acc2[p].onclick=function(){
+var men1=this.nextElementSibling;
+if(men1.style.display==="block")
+{
+
+  men1.style.display="none";
+}
+else
+{
+
+  men1.style.display="block";
+}
+
+  }
+}
+
    
 
     if(matchMedia)
@@ -759,11 +1090,17 @@ var i;
        var list1=document.getElementsByClassName("li-collapse");
        var menu1=document.getElementsByClassName("menu");
        var hd=document.getElementsByClassName("head");
+       var m1=document.getElementsByClassName("menu1");
+       var m2=document.getElementsByClassName("bt-left");
+       var m3=document.getElementsByClassName("menu-left");
        var i;
        
       if(mq.matches){
 
       panel1[0].style.display="block";
+      m1[0].style.display="block";
+      m2[0].style.display="block";
+      m3[0].style.display="none";
       for(i=0;i<list1.length;i++)
       {
         list1[i].style.display="inline-block";
@@ -786,6 +1123,9 @@ else
 
   panel1[0].style.display="none";
   hd[0].style.height="150px";
+  m1[0].style.display="none";
+  m2[0].style.display="none";
+   m3[0].style.display="none";
 }
 
 
